@@ -94,7 +94,7 @@ export default class App extends Component {
     }
 
     return (
-      <View styles={styles.container}>
+      <View style={styles.container}>
         <View style={styles.calculation}>
           <Text style={styles.calculationText}>{this.state.resultText}</Text>
         </View>
@@ -120,12 +120,16 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // backgroundColor:'black'
   },
   white: {
-    color: 'white'
+    color: 'white',
+    fontSize: 25,
   },
   btnText: {
-    color: 'white'
+    color: 'white',
+    fontSize: 25,
+    padding: 15
   },
   btn: {
     flex: 1,
@@ -143,16 +147,14 @@ const styles = StyleSheet.create({
     color: 'black'
   },
   calculation: {
-    // flex: 2,
+    flex: 1,
     backgroundColor: 'white',
-    height: 150,
     justifyContent: 'center',
     alignItems: 'flex-end'
   },
   result: {
-    // flex: 1,
+    flex: 1,
     backgroundColor: 'white',
-    height: 75,
     justifyContent: 'center',
     alignItems: 'flex-end'
   },
@@ -165,13 +167,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#434343'
   },
   buttons: {
-    flexGrow: 1,
-    flexDirection: 'row'
-  }, row: {
+    flexGrow: 2,
+    flexDirection: 'row',
+  },
+  row: {
     flexDirection: 'row',
     flex: 1,
     justifyContent: 'space-around',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    fontSize: 25
   },
 });
 
